@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Rampa Acessível</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>Simulador de Rampa Acessível</h2>
+
+    <label for="altura">Altura do desnível (em cm):</label>
+    <input type="number" id="altura" placeholder="Ex: 40" />
+
+    <label for="tipo">Tipo de uso:</label>
+    <select id="tipo">
+      <option value="5">Público - Acesso longo (máx 5%)</option>
+      <option value="8.33">Comum (máx 8,33%)</option>
+      <option value="12.5">Privado - Pequeno desnível (máx 12,5%)</option>
+    </select>
+
+    <div class="oculto" id="campoComprimento">
+      <label for="comprimento">Comprimento da rampa (em cm):</label>
+      <input type="number" id="comprimento" placeholder="Ex: 300" />
+    </div>
+
+    <button onclick="calcularRampa()">Calcular</button>
+    <button onclick="alternarModo()" id="alternarModo">Verificar Rampa Existente</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
